@@ -1,40 +1,17 @@
 export const SITE = {
-  URL: "https://your_site.com",
-  TITLE: "Mono Lume",
-  DESCRIPTION:
-    "A full-stack developer with a strong focus on building fast, accessible, and maintainable web applications.",
-  EMAIL: "hi@monolume.com",
+  URL: "https://cheyennekuckein.com",
+  TITLE: "Cheyenne Kuckein",
+  DESCRIPTION: "Product marketer helping B2C and B2B2C scale-ups win Anglophone markets with insight-led, AI-assisted GTM. Based in the French Alps.",
 };
 
 export const HOME = {
-  TITLE: "Home",
-  DESCRIPTION:
-    "A personal blog about coding, building projects, and figuring things out",
+  TITLE: "Cheyenne Kuckein | Product Marketing Manager Portfolio",
+  DESCRIPTION: "Product marketer helping B2C and B2B2C scale-ups win Anglophone markets with insight-led, AI-assisted GTM. Based in the French Alps.",
 };
 
-export const BLOG = {
-  TITLE: "Blog",
-  DESCRIPTION:
-    "A collection of articles on programming, projects and other stuff",
-};
-
-export const PROJECTS = {
-  TITLE: "Projects",
-  DESCRIPTION:
-    "A collection of my projects with links to repositories and live demos.",
-};
-
+export const PROJECTS = { TITLE: "Work", DESCRIPTION: "Case studies in progress. Here's what's coming." };
+export const BLOG = { TITLE: "Blog", DESCRIPTION: "Archived blog posts" };
 export const SOCIALS = [
-  {
-    NAME: "X",
-    HREF: "https://x.com/your_username",
-  },
-  {
-    NAME: "Linkedin",
-    HREF: "https://linkedin.com/",
-  },
-  {
-    NAME: "Github",
-    HREF: "https://github.com/your_username",
-  },
+  { NAME: "LinkedIn", HREF: "https://linkedin.com/in/cheyennekuckein" },
+  { NAME: "GitHub", HREF: "https://github.com/cheyproductguy" },
 ];

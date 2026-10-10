@@ -1,27 +1,15 @@
 ---
-import { SITE } from "@/consts";
 ---
 
-<section
-    class="grid grid-cols-1 lg:grid-cols-2 items-center container mx-auto min-h-screen p-6 md:gap-16 gap-8 pt-18"
->
-    <h1 class="heading text-[clamp(6rem,20vw,12.5rem)] uppercase">
-        {SITE.TITLE}
-    </h1>
-    <div class="space-y-8">
-        <p class="text-2xl text-secondary">
-            A full-stack developer with a strong focus on building fast,
-            accessible, and maintainable web applications.
-        </p>
+<section class="grid grid-cols-1 lg:grid-cols-2 items-center container mx-auto min-h-screen p-6 md:gap-16 gap-8 pt-18">
+    <div>
+        <h1 class="heading text-[clamp(3rem,6vw,5rem)] max-w-full uppercase leading-none">Cheyenne Kuckein</h1>
+        <p class="text-2xl text-secondary mt-4">I help B2B2C insurance, energy and e-comm scale-ups turn customer insight into positioning &amp; GTM systems that win international markets.</p>
+    </div>
+    <div>
         <div class="flex flex-col md:flex-row gap-2.5">
-            <a
-                class="w-full sm:w-auto flex items-center justify-center bg-primary rounded-2xl py-3 px-6 sm:py-4 sm:px-10 cursor-pointer hover:bg-background hover:outline hover:outline-1 hover:outline-dashed hover:outline-secondary hover:text-foreground transition"
-                href="/projects">View Work</a
-            >
-            <a
-                class="w-full sm:w-auto flex items-center justify-center bg-foreground text-background rounded-2xl py-3 px-6 sm:py-4 sm:px-10 cursor-pointer hover:bg-background hover:outline hover:outline-1 hover:outline-dashed hover:outline-secondary hover:text-foreground transition"
-                href="#Contact">Hire me</a
-            >
+            <a class="heading uppercase w-full sm:w-auto flex items-center justify-center bg-primary rounded-2xl py-3 px-6 sm:py-4 sm:px-10 cursor-pointer hover:bg-background hover:outline hover:outline-1 hover:outline-dashed hover:outline-secondary hover:text-foreground transition" href="/projects">Check out my work</a>
+            <a class="heading uppercase w-full sm:w-auto flex items-center justify-center bg-transparent text-secondary rounded-2xl py-3 px-6 sm:py-4 sm:px-10 cursor-pointer outline outline-1 outline-secondary hover:bg-background hover:outline-dashed hover:text-secondary transition" href="https://linkedin.com/in/cheyennekuckein" target="_blank" rel="noreferrer">Connect with me</a>
         </div>
     </div>
 </section>

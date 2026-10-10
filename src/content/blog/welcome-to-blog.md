@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Welcome to the Blog"
 description: "An example introductory post to demonstrate typical blog content."
 date: "2025-02-25"
@@ -7,13 +8,13 @@ tags:
   - Demo
 series: Building-Redoed
 ---
-
+draft: true
 # Welcome!
 
 This is a sample blog post to show how a more “real” entry looks compared to the Markdown Style Guide.
 
 ---
-
+draft: true
 ## Why This Blog Exists
 
 Sometimes you need content to test:
@@ -23,7 +24,7 @@ Sometimes you need content to test:
 - How multiple posts interact in a layout
 
 ---
-
+draft: true
 ## A Bit of Filler Content
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
@@ -32,7 +33,7 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 ---
-
+draft: true
 ## Code Example
 
 ```bash
@@ -47,9 +48,10 @@ npm run dev
 ```
 
 ---
-
+draft: true
 ## Closing Thoughts
 
 That’s it for this dummy post.
 The next one might dive into something more specific — or just be another placeholder.
 Either way, now your Astro template has more than one post to display.
+

@@ -1,80 +1,40 @@
 <section id="About" class="container mx-auto mb-28 p-6">
     <h2 class="heading text-5xl md:text-9xl uppercase">About me</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 items-center md:p-0 gap-8">
-        <div class="space-y-6">
-            <div
-                class="w-full aspect-[668/516] md:max-w-[668px] overflow-hidden rounded-3xl"
-            >
-                <img
-                    src="/portrait.webp"
-                    alt="About Me Image"
-                    class="w-full h-full object-cover"
-                />
-            </div>
-        </div>
-
+        <div class="space-y-6"><div class="w-full aspect-[668/516] md:max-w-[668px] overflow-hidden rounded-3xl"><img src="/cheyenne-kuckein.webp" alt="Cheyenne Kuckein" class="w-full h-full object-cover" /></div></div>
         <div>
             <div class="text-lg md:text-2xl text-secondary space-y-4">
-                <p>
-                    I'm a full-stack developer with a strong focus on building
-                    fast, accessible, and maintainable web applications. Over
-                    the past 6 years, I’ve worked on high-traffic production
-                    systems, internal tools for startups, and indie products
-                    used by thousands.
-                </p>
-                <p>
-                    I specialize in JavaScript, TypeScript, and modern
-                    frameworks like Astro, React, and Svelte — but I’m most
-                    passionate about writing clean, resilient code that scales.
-                </p>
+                <p>Hello! I'm Cheyenne, a bilingual Product Marketing professional from Vancouver, Canada, currently based in Chamonix. I bring 7+ years of marketing experience across management, consulting, and Product Marketing roles in tech, insurance, energy, and e-commerce.</p>
+                <p>France has long felt like a second home. Multiple study, volunteer, and exchange experiences here throughout my life have shaped who I am, both personally and professionally. Following what was intended to be a six-month seasonal contract in the French Alps, I decided to leave British Columbia's mountains for new summits and career opportunities here in France.</p>
+                <p>Outside of work, you'll most likely find me outdoors: hiking, cycling, or playing soccer. On rainy days, I'm usually cozying up with a hot cup of tea (Lapsang Souchong, anyone?) while learning something new. My creative rotation evolves constantly, but language learning and multimedia art, like drawing and sewing, are my constants.</p>
             </div>
             <div>
-                <h3 class="heading text-2xl uppercase my-8 text-secondary">
-                    My Skills
-                </h3>
+                <h3 class="heading text-2xl uppercase my-8 text-secondary">My Skills</h3>
                 <div class="flex flex-wrap gap-4 mt-8">
-                    <span
-                        class="inline-flex items-center justify-center rounded-4xl py-4 px-8 outline-1 outline-dashed outline-secondary"
-                    >
-                        HTML
-                    </span>
-                    <span
-                        class="inline-flex items-center justify-center rounded-4xl py-4 px-8 outline-1 outline-dashed outline-secondary"
-                    >
-                        CSS
-                    </span>
-                    <span
-                        class="inline-flex items-center justify-center rounded-4xl py-4 px-8 outline-1 outline-dashed outline-secondary"
-                    >
-                        Javascript
-                    </span>
-                    <span
-                        class="inline-flex items-center justify-center rounded-4xl py-4 px-8 outline-1 outline-dashed outline-secondary"
-                    >
-                        Typescript
-                    </span>
-                    <span
-                        class="inline-flex items-center justify-center rounded-4xl py-4 px-8 outline-1 outline-dashed outline-secondary"
-                    >
-                        ReactJS
-                    </span>
-                    <span
-                        class="inline-flex items-center justify-center rounded-4xl py-4 px-8 outline-1 outline-dashed outline-secondary"
-                    >
-                        Tailwind CSS
-                    </span>
-                    <span
-                        class="inline-flex items-center justify-center rounded-4xl py-4 px-8 outline-1 outline-dashed outline-secondary"
-                    >
-                        Express JS
-                    </span>
-                    <span
-                        class="inline-flex items-center justify-center rounded-4xl py-4 px-8 outline-1 outline-dashed outline-secondary"
-                    >
-                        MonogDB
-                    </span>
+                    {['GTM Strategy', 'Positioning', 'Market & User Research', 'Sales Enablement', 'AI Workflows', 'Lifecycle Marketing'].map((skill) => <span class="inline-flex items-center justify-center rounded-4xl py-4 px-8 font-plex font-bold uppercase tracking-[-2%] outline-1 outline-dashed outline-secondary">{skill}</span>)}
+                </div>
+                <h3 class="heading text-2xl uppercase my-8 text-secondary">Languages</h3>
+                <div class="space-y-3">
+                    {[
+                        { language: 'English', level: 'Native', progress: 5 },
+                        { language: 'French', level: 'Professional working proficiency', progress: 4 },
+                        { language: 'Spanish', level: 'Beginner', progress: 1 },
+                    ].map(({ language, level, progress }) => (
+                        <div class="flex items-center justify-between gap-5 rounded-2xl border border-secondary/20 p-4">
+                            <div class="min-w-0">
+                                <p class="font-plex font-bold uppercase tracking-[-2%]">{language}</p>
+                                <p class="mt-1 text-sm text-secondary">{level}</p>
+                            </div>
+                            <div class="flex h-12 shrink-0 items-end gap-1.5" role="img" aria-label={`${language} proficiency visualization, ${progress} of 5`}>
+                                {[12, 20, 28, 38, 48].map((height, index) => (
+                                    <span class={`w-2.5 rounded-full ${index < progress ? 'bg-primary' : 'bg-secondary/20'}`} style={`height:${height}px`}></span>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
     </div>
 </section>
+

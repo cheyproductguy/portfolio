@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Markdown Style Guide"
 description: "A comprehensive demo post to showcase how markdown elements render in the Astro blog."
 date: "2025-02-24"
@@ -6,7 +7,7 @@ tags:
   - Markdown
   - Demo
 ---
-
+draft: true
 # Heading 1
 
 ## Heading 2
@@ -20,7 +21,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Another line to see how paragraphs stack.
 
 ---
-
+draft: true
 ## Lists
 
 ### Unordered List
@@ -40,14 +41,14 @@ Another line to see how paragraphs stack.
 3. Third
 
 ---
-
+draft: true
 ## Blockquotes
 
 > “This is a blockquote. It’s great for highlighting quotes or notes.”  
 > — Someone Smart
 
 ---
-
+draft: true
 ## Code Blocks
 
 Here’s a fenced code block:
@@ -60,7 +61,7 @@ console.log(greet("World"));
 ```
 
 ---
-
+draft: true
 ## Links and Images
 
 Here’s a link to [Astro](https://astro.build).
@@ -72,7 +73,7 @@ And here’s an image:
 Inline image example: ![Tiny](https://placehold.co/100x100).
 
 ---
-
+draft: true
 ## Tables
 
 | Syntax | Description |
@@ -82,12 +83,13 @@ Inline image example: ![Tiny](https://placehold.co/100x100).
 | Cell 2 | More        |
 
 ---
-
+draft: true
 ## Horizontal Rule
 
 That line above is a horizontal rule.
 Below is another:
 
 ---
-
+draft: true
 End of style guide.
+

@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "About This Template"
 description: "A README-style post that explains how to use and customize the blog template."
 date: "2025-02-26"
@@ -7,13 +8,13 @@ tags:
   - Template
 series: Building-Redoed
 ---
-
+draft: true
 # About This Template
 
 This post acts like a **README** for the template. It explains the basics of how the template works and where you can make changes.
 
 ---
-
+draft: true
 ## Folder Structure
 
 A typical Astro content setup might look like this:
@@ -29,7 +30,7 @@ src/
 ```
 
 ---
-
+draft: true
 ## Writing Posts
 
 Posts live in the `src/content/blog/` folder.
@@ -37,6 +38,7 @@ Each post needs **frontmatter** at the top, like this:
 
 ```yaml
 ---
+draft: true
 title: "My Post"
 description: "A short summary."
 date: "2025-02-20"
@@ -44,6 +46,7 @@ tags:
   - Example
   - Demo
 ---
+draft: true
 ```
 
 ## Adding Projects
@@ -53,12 +56,14 @@ Each project needs **frontmatter** at the top, like this:
 
 ```yaml
 ---
+draft: true
 title: "FormSync"
 description: "Serverless forms with instant email notifications, reCAPTCHA, and zero backend. Just drop in a <form>."
 liveUrl: https://example.com
 githubUrl: https://github.com
 image: { url: "/formsync.jpeg", alt: "FormSync thumbnail" }
 ---
+draft: true
 ```
 
 ## Styling Notes
@@ -68,7 +73,7 @@ image: { url: "/formsync.jpeg", alt: "FormSync thumbnail" }
 - Default placeholder images will show if no thumbnail is provided.
 
 ---
-
+draft: true
 ## Development
 
 To run the project locally:
@@ -81,7 +86,7 @@ pnpm run dev
 Then visit `http://localhost:4321` to preview the site.
 
 ---
-
+draft: true
 ## Customization
 
 You can edit:
@@ -91,8 +96,9 @@ You can edit:
 - **Components** → in `src/components/`
 
 ---
-
+draft: true
 ## Closing
 
 This template is meant to be a clean starting point for a portfolio.
 Feel free to **remove this post** once you’re ready to publish real content.
+
