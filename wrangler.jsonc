@@ -1,0 +1,7 @@
+{
+  "name": "late-dust-afc2",
+  "compatibility_date": "2026-10-10",
+  "assets": {
+    "directory": "./dist"
+  }
+}
