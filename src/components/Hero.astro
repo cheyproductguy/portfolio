@@ -4,7 +4,7 @@
 <section class="grid grid-cols-1 lg:grid-cols-2 items-center container mx-auto min-h-screen p-6 md:gap-16 gap-8 pt-18">
     <div>
         <h1 class="heading text-[clamp(3rem,6vw,5rem)] max-w-full uppercase leading-none">Cheyenne Kuckein</h1>
-        <p class="text-2xl text-secondary mt-4">I help B2B2C insurance, energy and e-comm scale-ups turn customer insight into positioning &amp; GTM systems that win international markets.</p>
+        <p class="text-2xl text-secondary mt-4">I help B2B2C <span class="pencil-highlight">insurance, energy and e-comm</span> scale-ups turn customer insight into positioning &amp; GTM systems that win international markets.</p>
     </div>
     <div>
         <div class="flex flex-col md:flex-row gap-2.5">
@@ -13,3 +13,18 @@
         </div>
     </div>
 </section>
+
+<style>
+    .pencil-highlight {
+        color: var(--color-foreground);
+        font-weight: 700;
+        padding-inline: 0.06em;
+        background-image:
+            linear-gradient(176deg, transparent 24%, rgb(242 133 0 / 0.34) 25% 76%, transparent 77%),
+            linear-gradient(173deg, transparent 32%, rgb(217 110 0 / 0.16) 33% 81%, transparent 82%);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+    }
+</style>

@@ -5,7 +5,7 @@ const allProjects: CollectionEntry<"projects">[] = await getCollection("projects
 ---
 <section id="Projects" class="container mx-auto px-6">
   <div class="overflow-hidden mb-4"><div class="flex animate-scroll"><div class="flex shrink-0 whitespace-nowrap">{Array.from({ length: 10 }).map(() => <h2 class="heading text-5xl md:text-9xl uppercase mr-4 md:mr-8 -mb-2">work</h2>)}</div><div class="flex shrink-0 whitespace-nowrap" aria-hidden="true">{Array.from({ length: 10 }).map(() => <h2 class="heading text-5xl md:text-9xl uppercase mr-4 md:mr-8 -mb-2">work</h2>)}</div></div></div>
-  <p class="text-xl md:text-2xl text-secondary mb-12">Case studies in progress. Here's what's coming.</p>
+  <p class="text-xl md:text-2xl text-secondary mb-12">Killer case studies brewing ☕</p>
   {allProjects.map((project) => <Card entry={project} />)}
 </section>
 <style>
