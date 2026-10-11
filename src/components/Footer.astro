@@ -1,25 +1,11 @@
 ---
 import { SITE, SOCIALS } from "@/consts";
-const links = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Work", href: "/projects" },
-  { name: "Contact", href: "/contact" },
-];
 ---
-<footer class="container mx-auto space-y-8 rounded-t-[80px] bg-primary p-10">
-  <div class="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center"><h2 class="text-5xl uppercase lg:text-8xl">{SITE.TITLE}</h2></div>
-  <div class="flex flex-col justify-between gap-10 sm:flex-row sm:flex-wrap">
-    <div><h3 class="mb-3 text-xl">Navigation</h3><ul class="space-y-2 text-secondary">{links.map((link) => <li><a class="mountain-link" href={link.href}>{link.name}</a></li>)}</ul></div>
-    <div><h3 class="mb-3 text-xl">Socials</h3><ul class="space-y-2 text-secondary">{SOCIALS.map((link) => <li><a class="footer-social" href={link.HREF} target="_blank" rel="noreferrer">{link.NAME}</a></li>)}</ul></div>
+<footer class="bg-primary container mx-auto rounded-t-[80px] p-10 space-y-8">
+  <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6"><h2 class="text-5xl lg:text-9xl uppercase">{SITE.TITLE}</h2></div>
+  <div class="flex flex-col sm:flex-row sm:flex-wrap justify-between gap-10">
+    <div><h3 class="mb-2 text-xl">Navigation</h3><ul class="space-y-1 text-secondary"><li><a href="/">Home</a></li><li><a href="/about">About</a></li><li><a href="/projects">Work</a></li><li><a href="/contact">Contact</a></li></ul></div>
+    <div><h3 class="mb-2 text-xl">Socials</h3><ul class="space-y-1 text-secondary">{SOCIALS.map((link) => <li><a href={link.HREF}>{link.NAME}</a></li>)}</ul></div>
   </div>
   <span class="block text-center text-sm opacity-70">© {SITE.TITLE}</span>
 </footer>
-<style>
-  .mountain-link { position:relative; display:inline-block; padding:.1rem .15rem; isolation:isolate; transition:color .18s; }
-  .mountain-link::before { position:absolute; z-index:-1; top:50%; left:-.12em; width:1.45em; height:.8em; transform:translate(-.25em,-50%) scale(.75); clip-path:polygon(0 100%,28% 42%,48% 78%,70% 15%,100% 100%); background:var(--color-background); content:""; opacity:0; transition:transform .18s,opacity .18s; }
-  .mountain-link:hover::before,.mountain-link:focus-visible::before { transform:translate(0,-50%) scale(1); opacity:.9; }
-  .mountain-link:hover,.mountain-link:focus-visible { color:var(--color-foreground); }
-  .footer-social { text-decoration:underline; text-underline-offset:4px; text-decoration-color:color-mix(in srgb,var(--color-secondary) 55%,transparent); }
-  .footer-social:hover,.footer-social:focus-visible { color:var(--color-foreground); text-decoration-color:currentColor; }
-</style>

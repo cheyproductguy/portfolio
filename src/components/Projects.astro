@@ -3,14 +3,13 @@ import Card from "./Card.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 const allProjects: CollectionEntry<"projects">[] = await getCollection("projects");
 ---
-<section id="Projects" class="container mx-auto px-6 py-12" aria-labelledby="work-title">
-  <h2 id="work-title" class="heading mb-8 text-center text-5xl uppercase md:text-8xl">Work</h2>
-  <p class="work-callout mx-auto mb-10 w-fit max-w-full border px-5 py-3 text-center font-plex text-sm font-bold">Killer case studies brewing ☕</p>
-  <div class="mx-auto grid max-w-6xl gap-4 md:grid-cols-3">
-    {allProjects.map((project, index) => <Card entry={project} compact index={index} />)}
-  </div>
+<section id="Projects" class="container mx-auto px-6">
+  <div class="overflow-hidden mb-4"><div class="flex animate-scroll"><div class="flex shrink-0 whitespace-nowrap">{Array.from({ length: 10 }).map(() => <h2 class="heading text-5xl md:text-9xl uppercase mr-4 md:mr-8 -mb-2">work</h2>)}</div><div class="flex shrink-0 whitespace-nowrap" aria-hidden="true">{Array.from({ length: 10 }).map(() => <h2 class="heading text-5xl md:text-9xl uppercase mr-4 md:mr-8 -mb-2">work</h2>)}</div></div></div>
+  <p class="text-xl md:text-2xl text-secondary mb-12">Killer case studies brewing ☕</p>
+  {allProjects.map((project) => <Card entry={project} />)}
 </section>
-
 <style>
-  .work-callout { border-color:#ead8c4; border-radius:2px; background:#fff0df; color:#9a6026; }
+  @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .animate-scroll { animation: scroll 15s linear infinite; }
 </style>
+

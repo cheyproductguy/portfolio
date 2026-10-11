@@ -1,18 +1,11 @@
 ---
 import type { CollectionEntry } from "astro:content";
-type Props = { entry: CollectionEntry<"blog"> | CollectionEntry<"projects">; compact?: boolean; index?: number };
-const { entry, compact = false, index = 0 } = Astro.props as Props;
+type Props = { entry: CollectionEntry<"blog"> | CollectionEntry<"projects"> };
+const { entry } = Astro.props as Props;
 const comingSoon = entry.collection === "projects" && entry.data.comingSoon;
 const href = `/${entry.collection}/${entry.id}`;
 ---
-{compact && comingSoon ? (
-  <article class="flex min-h-52 flex-col rounded-3xl border border-secondary/15 bg-secondary/5 p-6 text-secondary">
-    <p class="font-plex text-sm text-primary">{String(index + 1).padStart(2, "0")}</p>
-    <h3 class="heading my-4 text-2xl uppercase text-foreground">{entry.data.title}</h3>
-    <p class="text-base leading-relaxed">{entry.data.description}</p>
-    <p class="mt-auto pt-6 font-plex text-xs tracking-widest">COMING SOON</p>
-  </article>
-) : comingSoon ? (
+{comingSoon ? (
   <div class="relative flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 mb-8 pb-8 border-dashed border-b border-b-secondary text-gray-500 grayscale">
     <div class="w-full md:max-w-[610px] aspect-[610/400] overflow-hidden border-dashed border-secondary rounded-3xl bg-primary"></div>
     <div class="space-y-4 text-center md:text-left"><h3 class="heading uppercase text-2xl md:text-4xl max-w-xl">{entry.data.title}</h3><p class="text-lg md:text-2xl max-w-xl mx-auto md:mx-0">{entry.data.description}</p><p class="text-sm tracking-widest">COMING SOON</p></div>

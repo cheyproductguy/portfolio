@@ -1,106 +1,40 @@
-<section id="About" class="container mx-auto mb-24 px-6 py-8" aria-labelledby="about-title">
-    <h2 id="about-title" class="heading mb-8 text-center text-5xl uppercase md:text-8xl">About me</h2>
-    <div class="about-carousel mx-auto max-w-6xl" data-about-carousel>
-        <div class="about-track" data-about-track tabindex="0" aria-label="About Cheyenne, scroll horizontally to browse three cards">
-            <article class="about-card">
-                <div class="about-photo"><img src="/cheyenne-kuckein.webp" alt="Cheyenne Kuckein in Vancouver at sunset" loading="lazy" /></div>
-                <div class="card-copy">
-                    <p class="card-index">01 / 03</p>
-                    <h3>At Work</h3>
-                    <p>Hello! I'm Cheyenne, a bilingual Product Marketing professional from Vancouver, Canada, currently living my best life in Chamonix. I bring 7+ years of marketing experience across management, consulting, and Product Marketing roles in tech, insurance, energy, and e-commerce. As a native English speaker fluent in French, I do my best work bridging French product, marketing and sales teams with English-speaking markets.</p>
-                </div>
-            </article>
-            <article class="about-card">
-                <div class="card-copy">
-                    <p class="card-index">02 / 03</p>
-                    <h3>Life in France</h3>
-                    <p>France has long felt like a second home, shaped by several study, volunteer, and exchange experiences growing up. In 2025, what was meant to be a short six-month sabbatical working in the Alps changed everything. I felt more alive and challenged here than anywhere else. So, I followed my intuition, leaving British Columbia's mountains for new summits and career opportunities in France.</p>
-                </div>
-            </article>
-            <article class="about-card">
-                <div class="card-copy">
-                    <p class="card-index">03 / 03</p>
-                    <h3>At Home</h3>
-                    <p>Outside of work, you'll most likely find me outdoors: hiking, cycling, or playing soccer. On rainy days, I'm usually cozying up with a hot cup of tea (Lapsang Souchong, anyone?) while learning something new. My creative rotation evolves constantly, but language learning and multimedia art, like drawing and sewing, are my constants.</p>
-                </div>
-            </article>
-        </div>
-        <div class="carousel-controls">
-            <span class="scroll-hint">Scroll to explore</span>
-            <div class="carousel-actions">
-                <span class="carousel-count" data-about-count>1 / 3</span>
-                <button type="button" class="carousel-arrow" data-about-prev aria-label="Previous About card">←</button>
-                <button type="button" class="carousel-arrow" data-about-next aria-label="Next About card">→</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="about-details mx-auto mt-14 grid max-w-6xl gap-12 border-t border-secondary/20 pt-10 md:grid-cols-2">
+<section id="About" class="container mx-auto mb-28 p-6">
+    <h2 class="heading text-5xl md:text-9xl uppercase">About me</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center md:p-0 gap-8">
+        <div class="space-y-6"><div class="w-full aspect-[668/516] md:max-w-[668px] overflow-hidden rounded-3xl"><img src="/cheyenne-kuckein.webp" alt="Cheyenne Kuckein" class="w-full h-full object-cover" /></div></div>
         <div>
-            <h3 class="heading mb-5 text-2xl uppercase text-secondary">My Skills</h3>
-            <div class="flex flex-wrap gap-3">
-                {['GTM Strategy', 'Positioning', 'Market & User Research', 'Sales Enablement', 'AI Workflows', 'Lifecycle Marketing'].map((skill) => <span class="skill-pill inline-flex items-center justify-center rounded-4xl px-5 py-3 font-plex text-sm font-bold uppercase tracking-[-2%] outline-1 outline-dashed outline-secondary">{skill}</span>)}
+            <div class="text-lg md:text-2xl text-secondary space-y-4">
+                <p>Hello! I'm Cheyenne, a bilingual Product Marketing professional from Vancouver, Canada, currently living my best life in Chamonix. I bring 7+ years of marketing experience across management, consulting, and Product Marketing roles in tech, insurance, energy, and e-commerce. As a native English speaker fluent in French, I do my best work bridging French product, marketing and sales teams with English-speaking markets.</p>
+                <p>France has long felt like a second home, shaped by several study, volunteer, and exchange experiences growing up. In 2025, what was meant to be a short six-month sabbatical working in the Alps changed everything. I felt more alive and challenged here than anywhere else. So, I followed my intuition, leaving British Columbia's mountains for new summits and career opportunities in France.</p>
+                <p>Outside of work, you'll most likely find me outdoors: hiking, cycling, or playing soccer. On rainy days, I'm usually cozying up with a hot cup of tea (Lapsang Souchong, anyone?) while learning something new. My creative rotation evolves constantly, but language learning and multimedia art, like drawing and sewing, are my constants.</p>
             </div>
-        </div>
-        <div>
-            <h3 class="heading mb-5 text-2xl uppercase text-secondary">Languages</h3>
-            <div class="space-y-3">
-                {[
-                    { language: 'English', level: 'Native', progress: 5 },
-                    { language: 'French', level: 'Professional working proficiency', progress: 4 },
-                    { language: 'Spanish', level: 'Beginner', progress: 1 },
-                ].map(({ language, level, progress }) => (
-                    <div class="language-card flex items-center justify-between gap-4 rounded-2xl border border-secondary/20 p-4">
-                        <div class="min-w-0">
-                            <p class="font-plex font-bold uppercase tracking-[-2%]">{language}</p>
-                            <p class="mt-1 text-sm text-secondary">{level}</p>
+            <div>
+                <h3 class="heading text-2xl uppercase my-8 text-secondary">My Skills</h3>
+                <div class="flex flex-wrap gap-4 mt-8">
+                    {['GTM Strategy', 'Positioning', 'Market & User Research', 'Sales Enablement', 'AI Workflows', 'Lifecycle Marketing'].map((skill) => <span class="inline-flex items-center justify-center rounded-4xl py-4 px-8 font-plex font-bold uppercase tracking-[-2%] outline-1 outline-dashed outline-secondary">{skill}</span>)}
+                </div>
+                <h3 class="heading text-2xl uppercase my-8 text-secondary">Languages</h3>
+                <div class="space-y-3">
+                    {[
+                        { language: 'English', level: 'Native', progress: 5 },
+                        { language: 'French', level: 'Professional working proficiency', progress: 4 },
+                        { language: 'Spanish', level: 'Beginner', progress: 1 },
+                    ].map(({ language, level, progress }) => (
+                        <div class="flex items-center justify-between gap-5 rounded-2xl border border-secondary/20 p-4">
+                            <div class="min-w-0">
+                                <p class="font-plex font-bold uppercase tracking-[-2%]">{language}</p>
+                                <p class="mt-1 text-sm text-secondary">{level}</p>
+                            </div>
+                            <div class="flex h-12 shrink-0 items-end gap-1.5" role="img" aria-label={`${language} proficiency visualization, ${progress} of 5`}>
+                                {[12, 20, 28, 38, 48].map((height, index) => (
+                                    <span class={`w-2.5 rounded-full ${index < progress ? 'bg-primary' : 'bg-secondary/20'}`} style={`height:${height}px`}></span>
+                                ))}
+                            </div>
                         </div>
-                        <div class="language-peaks flex h-12 shrink-0 items-end gap-1" role="img" aria-label={`${language} proficiency visualization, ${progress} of 5 peaks`}>
-                            {[12, 18, 25, 33, 42].map((height, index) => <span class:list={['peak', index < progress && 'peak-active']} style={`height:${height}px`}></span>)}
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<style>
-    .about-track { display:flex; gap:1rem; overflow-x:auto; padding:0.25rem 0.25rem 1rem; scroll-snap-type:x mandatory; scrollbar-width:thin; scrollbar-color:color-mix(in srgb,var(--color-primary) 55%,transparent) transparent; }
-    .about-card { flex:0 0 min(86%,22rem); min-height:22rem; overflow:hidden; border:1px solid color-mix(in srgb,var(--color-secondary) 18%,transparent); border-radius:1.25rem; background:color-mix(in srgb,var(--color-secondary) 5%,var(--color-background)); scroll-snap-align:start; }
-    .about-photo { aspect-ratio:16/8; overflow:hidden; background:color-mix(in srgb,var(--color-secondary) 10%,var(--color-background)); }
-    .about-photo img { width:100%; height:100%; object-fit:cover; object-position:center 42%; }
-    .card-copy { padding:1.5rem; }
-    .card-copy h3 { margin:0 0 .8rem; font-family:var(--font-plex); font-size:1.1rem; font-weight:700; text-transform:uppercase; }
-    .card-copy p:not(.card-index) { color:var(--color-secondary); font-size:.98rem; line-height:1.65; }
-    .card-index { margin:0 0 .7rem; color:var(--color-primary); font-family:var(--font-plex); font-size:.7rem; letter-spacing:.08em; }
-    .carousel-controls { display:flex; justify-content:space-between; align-items:center; margin-top:.8rem; color:var(--color-secondary); font-family:var(--font-plex); font-size:.7rem; text-transform:uppercase; }
-    .carousel-actions { display:flex; align-items:center; gap:.5rem; }
-    .carousel-count { margin-right:.35rem; }
-    .carousel-arrow { display:grid; width:2.25rem; height:2.25rem; place-items:center; border:1px solid color-mix(in srgb,var(--color-secondary) 30%,transparent); border-radius:9999px; background:transparent; transition:background-color .18s,color .18s,border-color .18s; }
-    .carousel-arrow:hover,.carousel-arrow:focus-visible { border-color:var(--color-primary); background:var(--color-primary); color:var(--color-foreground); }
-    .skill-pill { cursor:default; transition:background-color .18s,color .18s,outline-color .18s,transform .18s; }
-    .skill-pill:hover { background:color-mix(in srgb,var(--color-primary) 13%,var(--color-background)); color:var(--color-foreground); outline-color:var(--color-primary); transform:translateY(-2px); }
-    .peak { display:block; width:12px; clip-path:polygon(50% 0,100% 100%,0 100%); background:color-mix(in srgb,var(--color-secondary) 20%,transparent); }
-    .peak-active { background:var(--color-primary); }
-    @media (min-width:768px) { .about-card { flex-basis:23rem; } }
-    @media (prefers-reduced-motion:reduce) { .skill-pill,.carousel-arrow { transition:none; } }
-</style>
-
-<script>
-    document.querySelectorAll('[data-about-carousel]').forEach((carousel) => {
-        const track = carousel.querySelector<HTMLElement>('[data-about-track]');
-        const count = carousel.querySelector<HTMLElement>('[data-about-count]');
-        const cards = Array.from(carousel.querySelectorAll<HTMLElement>('.about-card'));
-        const step = () => cards[0]?.getBoundingClientRect().width + 16 || 320;
-        const update = () => {
-            if (!track || !count) return;
-            const index = Math.min(cards.length, Math.max(1, Math.round(track.scrollLeft / step()) + 1));
-            count.textContent = `${index} / ${cards.length}`;
-        };
-        carousel.querySelector('[data-about-prev]')?.addEventListener('click', () => track?.scrollBy({ left: -step(), behavior: 'smooth' }));
-        carousel.querySelector('[data-about-next]')?.addEventListener('click', () => track?.scrollBy({ left: step(), behavior: 'smooth' }));
-        track?.addEventListener('scroll', update, { passive: true });
-        update();
-    });
-</script>
