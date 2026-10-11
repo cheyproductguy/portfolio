@@ -5,7 +5,7 @@ const testimonials: Testimonial[] = [];
 <section id="Testimonials" class="container mx-auto px-6 my-28" aria-labelledby="testimonials-title">
   <div class="mb-8">
     <div>
-      <p class="text-sm uppercase tracking-[0.18em] text-secondary mb-3">Coming soon</p>
+      <p class="mb-3 text-sm uppercase tracking-[0.18em] text-primary">Coming soon</p>
       <h2 id="testimonials-title" class="heading text-5xl lg:text-8xl uppercase">Working with me</h2>
     </div>
   </div>
@@ -17,19 +17,20 @@ const testimonials: Testimonial[] = [];
       {testimonials.length > 0 ? testimonials.map((item) => (
         <article class="testimonial-card">
           <span class="quote-mark" aria-hidden="true">“</span>
-          <img class="testimonial-avatar" src={item.photo} alt={item.name} loading="lazy" />
           <blockquote class="testimonial-quote text-lg md:text-2xl text-secondary">{item.quote}</blockquote>
-          <div class="testimonial-person"><p><strong>{item.name}</strong><br /><span class="text-secondary">{item.role}</span></p></div>
+          <div class="testimonial-person"><img class="testimonial-avatar" src={item.photo} alt={item.name} loading="lazy" /><p><strong>{item.name}</strong><br /><span class="text-secondary">{item.role}</span></p></div>
         </article>
       )) : (
         <>
           <article class="testimonial-card" aria-label="Placeholder testimonial">
             <span class="quote-mark" aria-hidden="true">“</span>
-            <div class="photo-placeholder" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="17" r="8"/><path d="M9 42c1-9 6-14 15-14s14 5 15 14"/></svg>
-            </div>
             <blockquote class="testimonial-quote text-lg md:text-2xl text-secondary"><em>Incoming quote about sales enablement and how i always deliver on hiking reccomendations.</em></blockquote>
-            <div class="testimonial-person"><p>— <strong>A grateful Account Exec</strong></p></div>
+            <div class="testimonial-person">
+              <div class="photo-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="17" r="8"/><path d="M9 42c1-9 6-14 15-14s14 5 15 14"/></svg>
+              </div>
+              <p>— <strong>A grateful Account Exec</strong></p>
+            </div>
           </article>
         </>
       )}
@@ -40,58 +41,53 @@ const testimonials: Testimonial[] = [];
 <style>
   .testimonial-viewport { overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
   .testimonial-viewport::-webkit-scrollbar { display: none; }
-  .testimonial-track { display: flex; align-items: stretch; gap: 1.25rem; padding-top: 2.25rem; }
+  .testimonial-track { display: flex; align-items: stretch; gap: 1.25rem; }
   .testimonial-card {
     position: relative;
     isolation: isolate;
     display: flex;
-    flex: 0 0 min(86%, 24rem);
-    min-height: 20rem;
+    flex: 0 0 min(100%, 44rem);
+    min-height: 15rem;
     flex-direction: column;
-    align-items: center;
-    gap: 1.25rem;
-    overflow: visible;
-    padding: 4.5rem 1.5rem 1.75rem;
-    border-radius: 1.25rem;
-    background: color-mix(in srgb, var(--color-secondary) 6%, var(--color-background));
-    text-align: center;
+    align-items: flex-start;
+    gap: 1rem;
+    overflow: hidden;
+    padding: 1.5rem;
+    border: 1px solid color-mix(in srgb, var(--color-secondary) 20%, transparent);
+    border-radius: 1.5rem;
+    background: color-mix(in srgb, var(--color-secondary) 5%, var(--color-background));
+    text-align: left;
     scroll-snap-align: start;
   }
   .quote-mark {
     position: absolute;
     z-index: 0;
-    top: 2.25rem;
-    left: .75rem;
+    top: -.8rem;
+    right: 1rem;
     color: var(--color-primary);
-    opacity: .2;
+    opacity: .18;
     font-family: Georgia, serif;
-    font-size: 11rem;
+    font-size: 10rem;
     line-height: 1;
     pointer-events: none;
   }
   .testimonial-avatar, .photo-placeholder {
-    position: absolute;
-    top: -2.25rem;
-    left: 50%;
-    z-index: 2;
     display: grid;
-    width: 4.5rem;
-    height: 4.5rem;
-    transform: translateX(-50%);
+    flex: 0 0 3rem;
+    width: 3rem;
+    height: 3rem;
     place-items: center;
-    border: .35rem solid var(--color-background);
     border-radius: 9999px;
-    background: color-mix(in srgb, var(--color-secondary) 14%, var(--color-background));
+    background: color-mix(in srgb, var(--color-secondary) 12%, var(--color-background));
     color: var(--color-secondary);
     object-fit: cover;
   }
-  .photo-placeholder svg { width: 2rem; stroke: currentColor; stroke-width: 2; }
-  .testimonial-quote { position: relative; z-index: 1; max-width: 24rem; border-inline-start: 0 !important; padding-inline-start: 0 !important; }
-  .testimonial-person { position: relative; z-index: 1; margin-top: auto; font-size: .95rem; }
+  .photo-placeholder svg { width: 1.5rem; stroke: currentColor; stroke-width: 2; }
+  .testimonial-quote { position: relative; z-index: 1; max-width: 38rem; border-inline-start: 0 !important; padding-inline-start: 0 !important; }
+  .testimonial-person { position: relative; z-index: 1; display: flex; align-items: center; gap: .75rem; margin-top: auto; font-size: .95rem; }
   .single-track { justify-content: center; }
   @media (min-width: 1024px) {
     .testimonial-viewport { overflow: visible; }
-    .testimonial-card { flex: 1 1 0; min-width: 0; }
-    .single-track .testimonial-card { flex: 0 1 24rem; }
+    .testimonial-card { flex: 0 1 44rem; min-width: 0; }
   }
 </style>

@@ -7,13 +7,15 @@ const links = [
     { name: "Contact", href: "/contact" },
 ];
 ---
-<header class="fixed top-0 w-full z-50">
-    <div class="container mx-auto flex items-center justify-between p-6">
-        <a href="/" class="font-bold font-plex text-4xl">{SITE.TITLE.toUpperCase().charAt(0)}.</a>
-        <nav class="space-x-3 text-secondary hidden md:block">{links.map((link) => <a href={link.href} class="hover:border-b-2 hover:border-dashed hover:border-secondary pb-0.5">{link.name}</a>)}</nav>
-        <button id="menu-toggle" class="hamburger focus:outline-none flex md:hidden" aria-label="Toggle navigation"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+<header class="fixed inset-x-0 top-0 z-50 border-b border-secondary/20 bg-white">
+    <div class="container mx-auto max-w-6xl">
+        <div class="flex items-center justify-between px-5 py-3 sm:px-6">
+            <a href="/" class="font-bold font-plex text-4xl">{SITE.TITLE.toUpperCase().charAt(0)}.</a>
+            <nav aria-label="Main navigation" class="hidden space-x-5 text-secondary md:block">{links.map((link) => <a href={link.href} class="pb-0.5 transition hover:border-b-2 hover:border-dashed hover:border-secondary">{link.name}</a>)}</nav>
+            <button id="menu-toggle" class="hamburger focus:outline-none flex md:hidden" aria-label="Toggle navigation" aria-controls="menu-mobile" aria-expanded="false"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+        </div>
+        <div id="menu-mobile" class="hidden px-5 pb-5 pt-3 text-secondary md:hidden sm:px-6"><nav aria-label="Mobile navigation" class="flex flex-col gap-4 text-xl">{links.map((link) => <a href={link.href} class="w-fit pb-0.5 hover:border-b-2 hover:border-dashed hover:border-secondary">{link.name}</a>)}</nav></div>
     </div>
-    <div id="menu-mobile" class="hidden md:hidden space-x-3 text-secondary bg-background backdrop-blur-2xl w-screen p-4"><nav class="flex flex-col gap-4 text-2xl">{links.map((link) => <a href={link.href} class="hover:border-b-2 hover:border-dashed hover:border-secondary pb-0.5">{link.name}</a>)}</nav></div>
 </header>
 <style>
 .hamburger { gap: 5px; cursor: pointer; position: relative; width: 24px; height: 21px; padding: 0; border: 0; background: transparent; }

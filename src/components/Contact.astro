@@ -1,15 +1,18 @@
 ---
 import { SOCIALS } from "@/consts";
 ---
-<section id="Contact" class="container mx-auto my-28 p-10 space-y-12">
-    <h2 class="heading text-5xl lg:text-9xl uppercase">Get in Touch</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-        <div class="space-y-6">
-            <p class="text-xl lg:text-3xl max-w-xl">Hiring? Collabs? Coffee chats? Reach out!</p>
-            <p class="text-xl">I'm fully authorized to work in France and Canada (remote). Open to roles in the Geneva corridor.</p>
-            <div class="text-xl space-y-2">{SOCIALS.map((link) => <p><a href={link.HREF} target="_blank" class="underline hover:text-secondary transition">{link.NAME}</a></p>)}</div>
+<section id="Contact" class="container mx-auto my-28 scroll-mt-32 space-y-10 px-6 py-10">
+    <h2 class="heading text-center text-5xl uppercase lg:text-9xl">Get in Touch</h2>
+    <div class="mx-auto max-w-5xl space-y-8">
+        <div class="space-y-4">
+            <p class="max-w-3xl text-xl lg:text-3xl">Hiring? Collabs? Coffee chats? Reach out!</p>
+            <p class="max-w-3xl text-xl">I'm fully authorized to work in France and Canada (remote). Open to roles in the Geneva corridor.</p>
         </div>
-        <form class="space-y-6">
+        <div class="flex gap-8 text-xl">
+            {SOCIALS.map((link) => <a href={link.HREF} target="_blank" rel="noreferrer" class="underline transition hover:text-secondary">{link.NAME}</a>)}
+        </div>
+        <form class="space-y-6" action="https://formsubmit.co/cheyenne.yvr@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New portfolio contact message" />
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div class="relative"><input type="text" id="name" name="name" class="peer border border-secondary border-dashed p-4 text-xl w-full focus:outline-none rounded-3xl placeholder-transparent" placeholder="Name" required /><label for="name" class="absolute left-4 top-4 text-xl text-gray-500 peer-placeholder-shown:top-4 peer-placeholder-shown:text-xl peer-focus:-top-2 peer-focus:text-sm peer-focus:px-2 peer-focus:text-secondary transition-all peer-focus:bg-background">Name</label></div>
                 <div class="relative"><input type="email" id="email" name="email" class="peer border border-secondary border-dashed p-4 text-xl w-full focus:outline-none rounded-3xl placeholder-transparent" placeholder="Email" required /><label for="email" class="absolute left-4 top-4 text-xl text-gray-500 peer-placeholder-shown:top-4 peer-placeholder-shown:text-xl peer-focus:-top-2 peer-focus:px-2 peer-focus:text-sm peer-focus:text-secondary transition-all peer-focus:bg-background">Email</label></div>
