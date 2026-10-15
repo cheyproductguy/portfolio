@@ -7,7 +7,7 @@ export async function getStaticPaths() {
     const allProjects: CollectionEntry<"projects">[] =
         await getCollection("projects");
 
-    return allProjects.map((project) => ({
+    return allProjects.filter((project) => !project.data.comingSoon).map((project) => ({
         params: { id: project.id },
         props: { project },
     }));
@@ -48,22 +48,20 @@ const { Content } = await render(project);
                     {project.data.title}
                 </h1>
                 <p>{project.data.description}</p>
-            </div>
-
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a
+            </div>            {(project.data.githubUrl || project.data.liveUrl) && <div class="flex flex-col sm:flex-row gap-4">
+                {project.data.githubUrl && <a
                     href={project.data.githubUrl}
                     class="w-full sm:w-auto flex items-center justify-center bg-primary rounded-2xl py-3 px-6 sm:py-4 sm:px-10 cursor-pointer hover:bg-background hover:outline hover:outline-1 hover:outline-dashed hover:outline-secondary hover:text-foreground transition"
                 >
                     Source
-                </a>
-                <a
+                </a>}
+                {project.data.liveUrl && <a
                     href={project.data.liveUrl}
                     class="w-full sm:w-auto flex items-center justify-center bg-foreground text-background rounded-2xl py-3 px-6 sm:py-4 sm:px-10 cursor-pointer hover:bg-background hover:outline hover:outline-1 hover:outline-dashed hover:outline-secondary hover:text-foreground transition"
                 >
                     Live Demo
-                </a>
-            </div>
+                </a>}
+            </div>}
         </div>
 
         <div

@@ -3,16 +3,28 @@ import type { CollectionEntry } from "astro:content";
 type Props = { entry: CollectionEntry<"blog"> | CollectionEntry<"projects"> };
 const { entry } = Astro.props as Props;
 const comingSoon = entry.collection === "projects" && entry.data.comingSoon;
-const href = `/${entry.collection}/${entry.id}`;
+const showProjectLink = !comingSoon;
+const href = entry.collection === "projects" && entry.data.title === "Picta Photo Books" ? "/projects/picta-photo-books" : "/" + entry.collection + "/" + entry.id;
+const ctaLabel = entry.collection === "projects" ? entry.data.ctaLabel || "Read More" : "Read More";
+const showCta = entry.collection !== "projects" || entry.data.showCta;
+const statusLabel = entry.collection === "projects" ? entry.data.statusLabel : undefined;
+const image = entry.data.image?.url || ("https://placehold.co/600x400?text=" + encodeURIComponent(entry.data.title));
+const imageAlt = entry.data.image?.alt || entry.data.title;
 ---
-{comingSoon ? (
-  <div class="relative flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 mb-8 pb-8 border-dashed border-b border-b-secondary text-gray-500 grayscale">
-    <div class="w-full md:max-w-[610px] aspect-[610/400] overflow-hidden border-dashed border-secondary rounded-3xl bg-primary"></div>
-    <div class="space-y-4 text-center md:text-left"><h3 class="heading uppercase text-2xl md:text-4xl max-w-xl">{entry.data.title}</h3><p class="text-lg md:text-2xl max-w-xl mx-auto md:mx-0">{entry.data.description}</p><p class="text-sm tracking-widest">COMING SOON</p></div>
+<div class="relative flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 mb-8 pb-8 border-dashed border-b border-b-secondary">
+  {showProjectLink ? (
+    <a class="relative w-full md:max-w-[610px] aspect-[610/400] overflow-hidden border-dashed border-secondary rounded-3xl" href={href} aria-label={"Open " + entry.data.title}>
+      <img src={image} alt={imageAlt} class="w-full h-full object-cover" />
+    </a>
+  ) : (
+    <div class="relative w-full md:max-w-[610px] aspect-[610/400] overflow-hidden border-dashed border-secondary rounded-3xl">
+      <img src={image} alt={imageAlt} class="w-full h-full object-cover" />
+    </div>
+  )}
+  <div class="w-full space-y-4 text-center md:text-left">
+    <h3 class="heading font-bold uppercase text-2xl md:text-4xl max-w-xl">{showProjectLink ? <a href={href} class="font-bold no-underline hover:no-underline hover:opacity-75">{entry.data.title}</a> : entry.data.title}</h3>
+    <p class="text-sm md:text-base leading-relaxed text-secondary max-w-xl mx-auto md:mx-0">{entry.data.description}</p>
+    {entry.data.tags?.length ? <div class="flex flex-wrap justify-center md:justify-start gap-2">{entry.data.tags.map((tag) => <span class="rounded-full border border-secondary/30 px-3 py-1 text-xs tracking-wide">{tag}</span>)}</div> : null}
+    {statusLabel ? <span role="status" class="heading inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3 uppercase">{statusLabel}</span> : comingSoon ? <span role="status" class="heading inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3 uppercase">Coming Soon</span> : showCta ? <a href={href} class="heading inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3 uppercase no-underline hover:no-underline transition hover:bg-background hover:outline hover:outline-1 hover:outline-dashed hover:outline-secondary hover:text-foreground">{ctaLabel} <span class="ml-2" aria-hidden="true">→</span></a> : null}
   </div>
-) : (
-  <a class="relative flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 mb-8 pb-8 border-dashed border-b border-b-secondary" href={href}>
-    <div class="w-full md:max-w-[610px] aspect-[610/400] overflow-hidden border-dashed border-secondary rounded-3xl"><img src={entry.data.image?.url || `https://placehold.co/600x400?text=${entry.data.title}`} alt={entry.data.image?.alt || entry.data.title} class="w-full h-full object-cover" /></div>
-    <div class="space-y-4 text-center md:text-left"><h3 class="heading uppercase text-2xl md:text-4xl max-w-xl line-clamp-2">{entry.data.title}</h3><p class="text-lg md:text-2xl text-secondary max-w-xl mx-auto md:mx-0 line-clamp-3">{entry.data.description}</p></div>
-  </a>
-)}
+</div>

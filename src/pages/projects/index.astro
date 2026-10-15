@@ -6,6 +6,7 @@ import { PROJECTS } from "@/consts";
 
 const allProjects: CollectionEntry<"projects">[] =
     await getCollection("projects");
+allProjects.sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999));
 ---
 
 <Layout title={PROJECTS.TITLE} description={PROJECTS.DESCRIPTION}>
