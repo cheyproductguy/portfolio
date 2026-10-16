@@ -4,56 +4,83 @@ description: 'Repositioned a stalled MVP into market whitespace around "guided a
 image:
   url: /picta-case-study.svg
   alt: An illustrated photo book with a landscape photo on its cover.
-comingSoon: true
-showCta: false
-statusLabel: Coming Soon
+showHeroImage: false
+showPageDescription: false
+showCta: true
+ctaLabel: Read More
 order: 1
 tags:
   - Competitive Research
   - Sales Enablement
 ---
 
-**Lead Product Marketing Manager · French scaleup · US market · December–April 2026**
+| **Field** | **Details** |
+| --- | --- |
+| **Sector** | B2B2C Photo Print Products |
+| **Stage** | Scaleup, post-MVP; product-market fit search |
+| **Market** | US |
+| **Role** | Lead PMM, Photo Books |
+| **Project Period** | Jan–Apr 2026 |
+| **Sides** | Buyers |
+| **Company** | [**Picta.com/us**](https://picta.com/us) |
 
-Picta sold 1,000 Photo Books before Christmas. Then sales slowed. I led customer and market research to sharpen the product’s value proposition, implement guided-creation messaging, and recommend which audiences to test next.
+### ⏱️ 30-Second Read
 
-## The situation
+Picta hit its 1,000-book holiday target, then sales slowed. I built stronger customer and market signals, found a gap between generic automation and demanding design tools, and implemented messaging around guided mobile creation.
 
-Pictarine is a French photo-printing scaleup serving US customers. Most photo orders were fulfilled through retail partners such as CVS and Walgreens, where same-day pickup was part of the appeal. Photo Books were different: a new, home-delivered product in a business with a broad customer base.
+### 01 · Situation
 
-The holiday MVP met its 1,000-book target, but Picta had no defined ideal customer or clear reason to choose its Photo Book. After the seasonal peak, daily sales were low and there was too little customer volume to rely on sales data alone for product-market-fit signals.
+Pictarine scaled in the US by fixing retail kiosk UX for retail giant partners like CVS and Walgreens, leveraging their brand equity for same-day pickup.
 
-## The problem
+Photo Books were a new, home-delivery-only offer. After hitting its 1,000-book holiday target, daily sales flatlined. Without ongoing volume, we couldn't rely on sales metrics alone to find product-market fit—requiring a deeper qualitative and market signal strategy.
 
-Making a photo book asked customers to do a lot: find the right photos, sort them, decide what mattered, and lay out the story. The easiest alternative was to leave photos in a camera roll, group chat, or social feed.
+### 02 · Mandate
 
-The market offered two unsatisfying ends of the trade-off: automated books that could feel generic, and flexible design tools that asked customers to do too much. Picta also carried a retail halo that could set the wrong expectations for home-delivered quality and timing.
+I joined as the second PMM to establish the full GTM foundation from scratch. Operating across a 10-person product squad (70%) and the broader marketing team (30% on seasonal campaigns), I owned end-to-end product marketing for Photo Books while navigating competing team priorities.
 
-## What I did
+### 03 · Action
 
-- **Built better customer signals:** added a post-purchase Sean Ellis question and a purchase-intent question; analyzed photo themes and project timing; mapped the funnel; interviewed customers about their creation process and what they were comfortable delegating to AI.
-- **Mapped the market:** compared six brands across ease, fulfillment speed, and perceived quality; combined desk research with Picta Prism survey findings (n=9,000) to score eight segments.
-- **Implemented positioning and messaging:** shifted the story from speed and “we build it for you” to guided mobile creation: **“Made to finish, from your phone.”** / **“We start it. You make it yours.”** This aligned the message to customer voice without engineering work.
+I partnered with User Research and Product Management to drive competitor benchmarking, JTBD interviews, and deep product data analysis—including customer reviews, funnel drop-off, creation time, and session duration. We uncovered a critical insight: as the market rushed toward full automation, users actually resisted pure speed. They wanted relief from photo selection and layout overwhelm, without losing creative control to AI.
 
-## The decision
+### 04 · The Decision
 
-**Help people finish the book without taking the story away from them.**
+This allowed us to reposition into market whitespace around “guided automation”—using AI to help pick the best photos and start the layout, without the creator losing their personal touch.
 
-The research pointed to guided automation: relieve photo-selection and layout overwhelm while keeping the customer in control. I implemented this as a positioning and messaging shift around Picta’s mobile experience.
+We shifted messaging away from raw speed toward guided mobile creation:
 
-The segment scorecard gave the team a sharper next question. Memorial (17.5) and Group Social Events (15.5) led the opportunity ranking; Couples (13.0) became a third territory to explore. These segment choices and value propositions were north-star recommendations to test iteratively—not validated launch audiences.
+- *“Done in 5 minutes”* → *“Made to finish, from your phone.”*
+- *“We build it for you”* → *“We start it. You make it yours.”*
 
-## What changed
+Over the three-month sprint, light product refinements were made following customer feedback analysis. However, this work primarily drove positioning and messaging alignment.
 
-Alongside this work, over three months, reported product satisfaction moved from **4.3 to 4.7 stars** and returns fell **30%**. In early messaging tests, daily sales rose from **1–2 books to a record 13 in one day**. These results were observed during the work; this was not a controlled attribution study.
+### 05 · Impact
 
-## What I’m not claiming
+<div class="project-impact-grid">
+  <div class="project-impact-stat"><strong>4.2* → 4.7*</strong><span>Product satisfaction over three months</span></div>
+  <div class="project-impact-stat"><strong>−30%</strong><span>Returns over three months</span></div>
+  <div class="project-impact-stat"><strong>40%</strong><span>Sean Ellis Score*</span></div>
+  <div class="project-impact-stat"><strong>3–4X lift</strong><span>Over typical seasonal daily sales volume</span></div>
+</div>
 
-The holiday target was not proof of repeatable product-market fit. The segment recommendations were not validated through launch tests, and the relaunch did not happen after a company-wide strategic pivot. This positioning and messaging shift required no engineering work. The GTM launch plan is a future portfolio piece, not completed engagement work.
+<small class="project-impact-note">*Note: The original sample size was small and would require additional responses for higher statistical confidence.</small>
 
-## Selected work
+### 07 · Before / After
 
-- [Competitive Research: Value Benchmarking Study (PDF)](/picta-value-benchmarking-study.pdf)
-- [Segment Prioritization Framework (PDF)](/picta-segment-prioritization.pdf)
-- [Sales Enablement: customer conversation guide (open)](/picta-sales-enablement.html)
-- **GTM plan:** in progress.
+| **When I arrived** | **When I left** |
+| --- | --- |
+| No formal messaging | Segment-based messaging frameworks |
+| No defined segmentation | Two priority buyer segments |
+| Limited customer signals | Product and funnel analysis, plus interviews |
+| Limited market signals | SWOT, PESTEL, and Competitor Value Benchmarking |
+| Broad photo-printing competitor view | Photo Book competitor and whitespace analysis |
+| No structured PMF measurement | Sean Ellis survey and PMF dashboard |
+| Unclear PMM role | Increased cross-functional understanding of the PMM role and key artifacts across 7 GTM stages |
+
+### 08 · The Limits
+
+Even though we saw early product-market fit signals (such as the Mother's Day campaign achievement), the sample size was too small to prove repeatable, long-term PMF with high statistical confidence. Additionally, while the recommended segments were launched and tested iteratively, full results were cut short when the project paused at the end of April following a company-wide strategic pivot.
+
+### 09 · Key Work Samples
+
+- [Photo Book - Sales Enablement for Marketing - Positioning ↗ *(HTML)*](https://cheyproductguy.github.io/sales-enablement/)
+- Photo Book - Value Benchmarking Study ↗ *(Coming Soon)*

@@ -47,7 +47,7 @@ const { Content } = await render(project);
                 <h1 class="heading text-3xl md:text-5xl uppercase">
                     {project.data.title}
                 </h1>
-                <p>{project.data.description}</p>
+                {project.data.showPageDescription && <p>{project.data.subtitle || project.data.description}</p>}
             </div>            {(project.data.githubUrl || project.data.liveUrl) && <div class="flex flex-col sm:flex-row gap-4">
                 {project.data.githubUrl && <a
                     href={project.data.githubUrl}
@@ -64,15 +64,7 @@ const { Content } = await render(project);
             </div>}
         </div>
 
-        <div
-            class="w-full lg:h-[70vh] aspect-[610/400] overflow-hidden rounded-2xl"
-        >
-            <img
-                src={project.data.image.url}
-                alt={project.data.image.alt}
-                class="w-full h-full object-contain"
-            />
-        </div>
+        {project.data.showHeroImage && project.data.image && (<div class="w-full lg:h-[70vh] aspect-[610/400] overflow-hidden rounded-2xl"><img src={project.data.image.url} alt={project.data.image.alt} class="w-full h-full object-contain" /></div>)}
         <article
             class="px-3 flex-2 mx-auto border-b border-dashed border-secondary mb-18"
         >
@@ -80,6 +72,13 @@ const { Content } = await render(project);
         </article>
     </div>
 
+    <style is:global>
+.project-impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:1.25rem 0}
+.project-impact-stat{background:#fff;border:1px solid rgba(0,0,0,.12);border-radius:14px;padding:15px 18px}
+.project-impact-stat strong{display:block;font-family:var(--font-plex,"IBM Plex Mono",monospace);font-size:clamp(1.65rem,3vw,2rem);line-height:1.2;color:#111}
+.project-impact-stat span{display:block;margin-top:.45rem;font:400 .82rem/1.4 var(--font-geist,Arial,sans-serif);color:#535353}
+.project-impact-note{display:block;margin-top:.5rem;font-size:.72rem;line-height:1.4;color:#666}
+</style>
     <script is:inline>
         document.getElementById("back-button").addEventListener("click", () => {
             window.history.back();
