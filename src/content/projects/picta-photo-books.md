@@ -83,4 +83,4 @@ Even though we saw early product-market fit signals (such as the Mother's Day ca
 ### 09 · Key Work Samples
 
 - [Photo Book - Sales Enablement for Marketing - Positioning ↗ *(HTML)*](https://cheyproductguy.github.io/sales-enablement/)
-- Photo Book - Value Benchmarking Study ↗ *(Coming Soon)*
+- [Photo Book - Competitive Research & Perceptual Matrix ↗ *(HTML)*](https://cheyproductguy.github.io/competitive-analysis/)
