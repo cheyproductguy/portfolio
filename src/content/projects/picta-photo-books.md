@@ -56,7 +56,7 @@ Over the three-month sprint, light product refinements were made following custo
 ### 05 · Impact
 
 <div class="project-impact-grid">
-  <div class="project-impact-stat"><strong>4.2* → 4.7*</strong><span>Product satisfaction over three months</span></div>
+  <div class="project-impact-stat"><strong>4.3* → 4.7*</strong><span>Product satisfaction over three months</span></div>
   <div class="project-impact-stat"><strong>−30%</strong><span>Returns over three months</span></div>
   <div class="project-impact-stat"><strong>40%</strong><span>Sean Ellis Score*</span></div>
   <div class="project-impact-stat"><strong>3–4X lift</strong><span>Over typical seasonal daily sales volume</span></div>
