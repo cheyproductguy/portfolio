@@ -4,7 +4,7 @@ description: Repositioned flagship Emergency Medical insurance, achieving record
 image:
   url: /pacific-blue-cross-travel.svg
   alt: Illustration of a travel bag, airplane and medical cross.
-comingSoon: false
+comingSoon: true
 showCta: false
 statusLabel: Coming Soon
 order: 2

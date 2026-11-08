@@ -1,13 +1,21 @@
 ---
-import Card from "./Card.astro";
+import ProjectTile from "./ProjectTile.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 const allProjects: CollectionEntry<"projects">[] = await getCollection("projects");
 allProjects.sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999));
 ---
-<section id="Projects" class="container mx-auto scroll-mt-32 px-6">
-  <div class="overflow-hidden mb-4"><div class="flex animate-scroll"><div class="flex shrink-0 whitespace-nowrap">{Array.from({ length: 10 }).map(() => <h2 class="heading text-5xl md:text-9xl uppercase mr-4 md:mr-8 -mb-2">work</h2>)}</div><div class="flex shrink-0 whitespace-nowrap" aria-hidden="true">{Array.from({ length: 10 }).map(() => <h2 class="heading text-5xl md:text-9xl uppercase mr-4 md:mr-8 -mb-2">work</h2>)}</div></div></div>
-  <p class="text-xl md:text-2xl text-secondary mb-12">Here’s a snapshot of my recent PMM work</p>
-  {allProjects.map((project) => <Card entry={project} />)}
+<section id="Projects" class="container mx-auto my-28 max-w-6xl scroll-mt-32 px-6 py-10">
+  <h2 class="sr-only">My Work</h2>
+  <div class="mb-4 overflow-hidden" aria-hidden="true">
+    <div class="flex animate-scroll">
+      <div class="flex shrink-0 whitespace-nowrap">{Array.from({ length: 10 }).map(() => <span class="heading mr-4 text-3xl uppercase md:mr-8 md:text-5xl">My Work</span>)}</div>
+      <div class="flex shrink-0 whitespace-nowrap">{Array.from({ length: 10 }).map(() => <span class="heading mr-4 text-3xl uppercase md:mr-8 md:text-5xl">My Work</span>)}</div>
+    </div>
+  </div>
+  <p class="mb-8 max-w-5xl text-xl text-secondary md:text-2xl">A snapshot of my recent PMM work</p>
+  <div class="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-2">
+    {allProjects.map((project) => <ProjectTile entry={project} />)}
+  </div>
 </section>
 <style>
   @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }

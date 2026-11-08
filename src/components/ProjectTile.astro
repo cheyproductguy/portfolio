@@ -1,0 +1,37 @@
+---
+import type { CollectionEntry } from "astro:content";
+type Props = { entry: CollectionEntry<"projects"> };
+const { entry } = Astro.props as Props;
+const href = entry.data.title === "Picta Photo Books" ? "/projects/picta-photo-books" : "/projects/" + entry.id;
+const showProjectLink = !entry.data.comingSoon && entry.data.statusLabel !== "Coming Soon";
+const image = entry.data.image?.url || ("https://placehold.co/600x400?text=" + encodeURIComponent(entry.data.title));
+const imageAlt = entry.data.image?.alt || entry.data.title;
+const statusLabel = entry.data.statusLabel || (entry.data.comingSoon ? "Coming Soon" : undefined);
+---
+<article class="flex h-full min-w-0 flex-col rounded-3xl border border-dashed border-secondary/30 p-4 sm:p-5">
+  <div class="relative aspect-[16/10] w-full overflow-hidden rounded-2xl">
+    {showProjectLink ? (
+      <a class="project-visual-link block h-full w-full" href={href} aria-label={"Open " + entry.data.title}>
+        <img src={image} alt={imageAlt} class="h-full w-full object-cover" />
+      </a>
+    ) : (
+      <img src={image} alt={imageAlt} class="h-full w-full object-cover" />
+    )}
+  </div>
+  <div class="flex flex-1 flex-col pt-4">
+    <h3 class="heading min-h-14 max-w-xl text-xl font-bold uppercase md:min-h-16 md:text-2xl">{entry.data.title}</h3>
+    <p class="mt-3 max-w-xl text-sm leading-relaxed text-secondary md:text-base">{entry.data.description}</p>
+    {entry.data.tags?.length ? <div class="mt-4 flex flex-wrap gap-2">{entry.data.tags.map((tag) => <span class="project-tech-label"><span class="project-tech-label-marker" aria-hidden="true"></span>{tag}</span>)}</div> : null}
+    <div class="mt-auto pt-5">
+      {statusLabel ? <span role="status" class="heading inline-flex min-w-[8.125rem] items-center justify-center rounded-2xl bg-primary px-5 py-2.5 text-sm uppercase">{statusLabel}</span> : entry.data.showCta ? <a href={href} class="project-cta heading inline-flex min-w-[8.125rem] items-center justify-center rounded-2xl bg-primary px-5 py-2.5 text-sm uppercase transition hover:bg-background hover:outline hover:outline-1 hover:outline-dashed hover:outline-secondary hover:text-foreground">{entry.data.ctaLabel || "Read More"}</a> : null}
+    </div>
+  </div>
+</article>
+
+<style is="global">
+  .project-cta, .project-cta:hover, .project-cta:focus { text-decoration: none !important; }
+  .project-tech-label { display: inline-flex; align-items: center; gap: .45rem; border: 1px dashed color-mix(in srgb, var(--color-secondary) 40%, transparent); border-radius: .5rem; padding: .35rem .65rem; color: var(--color-secondary); font-family: var(--font-plex); font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  .project-tech-label-marker { width: .38rem; height: .38rem; flex: 0 0 auto; border-radius: 9999px; background: var(--color-primary); }
+  .project-visual-link:focus-visible { outline: 2px solid var(--color-primary); outline-offset: -4px; }
+
+</style>

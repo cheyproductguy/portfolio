@@ -1,5 +1,5 @@
-<section id="About" class="container mx-auto mb-28 px-6 py-10">
-   <h2 class="heading mb-8 text-center text-3xl uppercase md:text-5xl">About me</h2>
+<section id="About" class="container mx-auto mb-28 max-w-6xl px-6 py-10">
+   <h2 class="heading mb-8 text-left text-3xl uppercase md:text-5xl">About Me</h2>
     <div class="mx-auto max-w-6xl">
         <h3 class="heading mb-5 text-2xl uppercase text-secondary md:text-3xl">Personal &amp; Professional Life</h3>
         <div class="about-story-layout">
@@ -40,14 +40,14 @@
             </div>
         </div>
 
-        <div class="mt-12">
+        <div class="about-detail-section mt-12">
             <h3 class="heading mb-5 text-2xl uppercase text-secondary md:text-3xl">My Skills</h3>
-            <div class="flex flex-wrap justify-center gap-4 md:grid md:grid-cols-3 md:justify-items-center">
+            <div class="mx-auto flex max-w-4xl flex-wrap justify-center gap-4">
                 {['GTM Strategy', 'Positioning', 'Market & User Research', 'Sales Enablement', 'AI Workflows', 'Lifecycle Marketing'].map((skill) => <span class="inline-flex items-center justify-center rounded-4xl px-8 py-4 font-plex font-bold uppercase tracking-[-2%] outline-1 outline-dashed outline-secondary">{skill}</span>)}
             </div>
         </div>
 
-        <div class="mt-12">
+        <div class="about-detail-section mt-12">
             <h3 class="heading mb-5 text-2xl uppercase text-secondary md:text-3xl">Languages</h3>
             <div class="space-y-3">
                 {[
@@ -69,6 +69,8 @@
 </section>
 
 <style>
+    .about-detail-section { position: relative; isolation: isolate; overflow: hidden; border: 1px solid color-mix(in srgb, var(--color-secondary) 12%, transparent); border-radius: 1.5rem; padding: clamp(1rem, 3vw, 2rem); }
+
     .about-story-layout { display: grid; grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr); gap: 1.5rem; align-items: stretch; }
     .about-story-panel { position: relative; min-width: 0; }
     .about-portrait { grid-column: 1; grid-row: 1; }

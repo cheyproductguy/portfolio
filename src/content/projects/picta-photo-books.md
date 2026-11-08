@@ -1,6 +1,6 @@
 ---
 title: "Picta Photo Books"
-description: 'Repositioned a stalled MVP into market whitespace around "guided automation," boosting CSAT to 4.7 stars and driving record seasonal campaign sales.'
+description: 'Repositioned a stalled MVP into market whitespace around "guided automation," boosting CSAT from 4.3 to 4.7 and driving record seasonal campaign sales.'
 image:
   url: /picta-case-study.svg
   alt: An illustrated photo book with a landscape photo on its cover.
